@@ -51,6 +51,8 @@ public class A1Jedi {
 			int buyNum = scan.nextInt();
 			double totalPrice = 0;
 			
+			int tempArray[] = new int[itemList.size()];
+			
 				for (int j = 0; j < buyNum; j++)
 				{
 					int quantity = scan.nextInt();
@@ -60,10 +62,16 @@ public class A1Jedi {
 					int itemIndx = itemList.indexOf(itsName);
 					//int addedValue = quantity + quanList.get(itemIndx);
 					itemArray[itemIndx] += quantity;
-					cusArray[itemIndx] += 1;
+					
+					if (tempArray[itemIndx] == 0)
+					{
+						cusArray[itemIndx] += 1;
+						tempArray[itemIndx] += 1;
+					}
+					
 				}
-			
-				totalList.add(totalPrice);
+				
+			totalList.add(totalPrice);
 		}
 		
 		for (int c = 0; c < itemArray.length; c++)
