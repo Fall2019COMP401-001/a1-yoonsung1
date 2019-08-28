@@ -66,9 +66,9 @@ public class A1Adept {
 		
 		double avg = sum / cusNum;
 		
-		System.out.println("Biggest: " + firstList.get(indxOfBig) + " " + lastList.get(indxOfBig) + " (" + totalList.get(indxOfBig)
+		System.out.println("Biggest: " + firstList.get(indxOfBig) + " " + lastList.get(indxOfBig) + " (" + String.format("%.2f",totalList.get(indxOfBig))
 			+ ")");
-		System.out.println("Smallest: " + firstList.get(indxOfSm) + " " + lastList.get(indxOfSm) + " (" + totalList.get(indxOfSm)
+		System.out.println("Smallest: " + firstList.get(indxOfSm) + " " + lastList.get(indxOfSm) + " (" + String.format("%.2f",totalList.get(indxOfSm))
 		+ ")");
 		System.out.println("Average: " + String.format("%.2f", avg));
 	}
