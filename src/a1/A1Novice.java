@@ -29,8 +29,8 @@ public class A1Novice {
 					double eachPrice = itemPrice * quantity;
 					totalPrice += eachPrice;
 				}
-	
-			System.out.println(splitFirst[0] + "." + " " + lastName + ":" + " " + totalPrice);	
+				
+			System.out.println(splitFirst[0] + "." + " " + lastName + ":" + " " + String.format("%.2f", totalPrice));	
 			
 		}
 		
