@@ -32,10 +32,13 @@ public class A1Jedi {
 		ArrayList<Double> totalList = new ArrayList<Double> ();
 		//ArrayList<Integer> quanList = new ArrayList<Integer> ();
 		
-		int array[] = new int[itemList.size()];
+		int itemArray[] = new int[itemList.size()];
+		int cusArray[] = new int[itemList.size()];
+		
 		for (int i = 0; i < itemList.size(); i++)
 		{
-			array[i] = 0;
+			itemArray[i] = 0;
+			cusArray[i] = 0;
 		}
 		
 		for (int i = 0; i < cusNum; i++)
@@ -56,17 +59,18 @@ public class A1Jedi {
 					
 					int itemIndx = itemList.indexOf(itsName);
 					//int addedValue = quantity + quanList.get(itemIndx);
-					array[itemIndx] += quantity;
+					itemArray[itemIndx] += quantity;
+					cusArray[itemIndx] += 1;
 				}
 			
 				totalList.add(totalPrice);
 		}
 		
-		for (int c = 0; c < array.length; c++)
+		for (int c = 0; c < itemArray.length; c++)
 		{
-			if (array[c] != 0)
+			if (itemArray[c] != 0)
 				{
-					System.out.println(array[c] + " customers bought " + itemList.get(c));
+					System.out.println(cusArray[c] + " customers bought " + itemArray[c] + " " + itemList.get(c));
 				}
 			else
 				{
